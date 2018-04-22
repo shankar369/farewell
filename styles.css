@@ -1,0 +1,221 @@
+#name{
+    width: 100%;
+    height: 40px;
+    padding: 30px;
+    font-size: 50px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.decorations{
+    position: absolute;
+    animation-name: decorations;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+    animation-timing-function: linear;
+}
+
+.one{
+    height: 100px;
+    width: 100px;
+    left: 0;
+    top: 0;
+}
+
+.two{
+    height: 100px;
+    width: 100px;
+    right: 0;
+    top: 0;
+
+}
+
+.four{
+    height: 80px;
+    width: 80px;
+    right: 20%;
+    top: 0;
+}
+
+.three{
+    height: 80px;
+    width: 80px;
+    left: 20%;
+    top: 0;
+}
+
+.five{
+    height: 80px;
+    width: 80px;
+    right: 10%;
+    top: 0;
+}
+
+.six{
+    height: 80px;
+    width: 80px;
+    left: 10%;
+    top: 0;
+}
+
+@keyframes decorations{
+    from{top: -30px}
+    to{top : 100%}
+}
+
+
+#photo img{
+    padding: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    width: auto;
+    animation-name: img;
+    animation-duration: 2s;
+}
+
+
+#button{
+    font-weight: bolder;
+    font-size: 30px;
+    color: blue;
+    position: absolute;
+    width: 100px;
+    
+    padding: 30px ;
+    line-height: 0;
+    border-radius: 50px;
+    background: pink;
+    cursor: pointer;
+    transition: 1s linear;
+    bottom: 0;
+    left: 45%;
+    text-align: center;
+}
+
+#button:hover{
+    background: red;
+   
+}
+
+/*@keyframes img{
+   
+    0%{ margin-top: 100px}
+    15%{margin-top: 0px}
+    30%{margin-top: 50px}
+    50%{margin-top:0px}
+    60%{margin-top: 40px}
+    70%{margin-top: 0px}
+    80%{margin-top: 10px}
+    90%{margin-top: 0;}
+    95%{margin-top: 5px}
+    96%{margin-top: 0}
+    99%{margin-top: 4px}
+    100%{margin-top: 0px}
+}*/
+
+@keyframes img{
+    0%{ height: 10px}
+    15%{height: 20px}
+    30%{height: 30px}
+    50%{height: 40px}
+    60%{height: 100px}
+    70%{height: 200px}
+    80%{height: 300px}
+    90%{height: 500px}
+    95%{height: 600px}
+    96%{height: 650px}
+    99%{height: 700px}
+    100%{height: 750px}
+}
+
+
+
+body {
+	width: 100wh;
+	height: 90vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB , grey ,pink ,yellow,skyblue);
+	background-size: 400% 400%;
+	-webkit-animation: Gradient 4s ease infinite;
+	-moz-animation: Gradient 4s ease infinite;
+	animation: Gradient 4s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@-moz-keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+@keyframes Gradient {
+	0% {
+		background-position: 0% 50%
+	}
+	50% {
+		background-position: 100% 50%
+	}
+	100% {
+		background-position: 0% 50%
+	}
+}
+
+
+.swing {
+    animation: swing ease-in-out 1s infinite alternate;
+    transform-origin: center -20px;
+    
+    //box-shadow: 5px 5px 10px rgba(0,0,0,0.5);
+}
+.swing img {
+    border: 5px solid #f8f8f8;
+    display: block;
+    
+}
+.swing:after{
+    content: '';
+    position: absolute;  
+    width: 20px; height: 20px;  
+    border: 1px solid #999;
+    top: -10px; left: 50%;
+    z-index: 0;
+    border-bottom: none;
+    border-right: none;
+    transform: rotate(45deg);
+    
+}
+/* nail */
+.swing:before{
+    content: '';
+    position: absolute;
+    width: 5px; height: 5px;
+    top: -14px;left: 54%;
+    z-index: 5;
+    border-radius: 50% 50%;
+    background: #000;
+}
+ 
+@keyframes swing {
+    0% { transform: rotate(3deg); }
+    100% { transform: rotate(-3deg); }
+}
